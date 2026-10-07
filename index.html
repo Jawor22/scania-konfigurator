@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Scania R/S 2016-</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+        }
+
+        h1 {
+            margin-top: 30px;
+        }
+
+        /* OBSZAR ZE ZDJĘCIEM SCANII */
+        .scania-container {
+            position: relative;
+            width: 700px;
+            max-width: 90%;
+            margin: 30px auto;
+        }
+
+        /* BAZOWE ZDJĘCIE PRZODU SCANII */
+        .scania {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        /* KANGUR */
+        .kangur {
+            position: absolute;
+
+            width: 53%;
+            height: auto;
+
+            left: 23.5%;
+
+            top: 325px;
+
+            transform: scaleY(1.10);
+            transform-origin: top center;
+
+            pointer-events: none;
+        }
+
+        /* KONFIGURATOR */
+        .konfigurator {
+            margin-top: 30px;
+        }
+
+        .opcja {
+            display: inline-block;
+            vertical-align: top;
+            margin: 20px 40px;
+        }
+
+        .opcja h2 {
+            margin-bottom: 15px;
+        }
+
+        /* PRZYCISKI */
+        button {
+            padding: 12px 25px;
+            margin: 5px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        /* CZARNY */
+        .czarny {
+            background-color: black;
+            color: white;
+        }
+
+        /* NIERDZEWKA */
+        .nierdzewka {
+            background-color: #d8d8d8;
+            color: black;
+            border: 2px solid #999;
+        }
+
+        /* ANODYZOWANY */
+        .anodyzowany {
+            background-color: #a8a8a8;
+            color: black;
+            border: 2px solid #777;
+        }
+
+        /* BEZ RAMY */
+        .bez-ramy {
+            display: block;
+            margin: 25px auto;
+            background-color: white;
+            color: black;
+            border: 2px solid #222;
+            font-weight: bold;
+            min-width: 180px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Scania R/S 2016-</h1>
+
+
+    <!-- PRZÓD SCANII + KANGUR -->
+    <div class="scania-container">
+
+        <!-- SCANIA -->
+        <img
+            id="scania"
+            class="scania"
+            src="ScaniaPrzó.png"
+            alt="Przód Scanii"
+        >
+
+        <!-- KANGUR -->
+        <img
+            id="kangur"
+            class="kangur"
+            src=""
+        >
+
+    </div>
+
+
+    <!-- KONFIGURATOR -->
+    <div class="konfigurator">
+
+        <!-- METEC -->
+        <div class="opcja">
+
+            <h2>METEC</h2>
+
+            <button
+                class="czarny"
+                onclick="wybierz('Metec-czarny.png')">
+                CZARNY
+            </button>
+
+            <button
+                class="nierdzewka"
+                onclick="wybierz('Metec-nierdzewka.png')">
+                NIERDZEWKA
+            </button>
+
+        </div>
+
+
+        <!-- TRUX -->
+        <div class="opcja">
+
+            <h2>TRUX</h2>
+
+            <button
+                class="anodyzowany"
+                onclick="wybierz('Trux-anodyzowany.png')">
+                ANODYZOWANY
+            </button>
+
+            <button
+                class="czarny"
+                onclick="wybierz('Trux-czarny.png')">
+                CZARNY
+            </button>
+
+        </div>
+
+
+        <!-- BEZ RAMY -->
+        <button
+            class="bez-ramy"
+            onclick="bezRamy()">
+            BEZ RAMY
+        </button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
